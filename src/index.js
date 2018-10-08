@@ -20,7 +20,12 @@ const incrementor = () => {
     incrementor.valueOf = ()=>{return count;};
     return incrementor;
 };
-const asyncIncrementor = () => {};
+let count_2=0;
+const asyncIncrementor = () => {
+    count_2++;
+    asyncIncrementor.valueOf = ()=>{return count_2;};
+    return asyncIncrementor;
+};
 const createIncrementer = () => {
     function* idMaker(){
         let index = 1;
